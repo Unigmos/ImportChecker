@@ -10,7 +10,6 @@
 
 def main():
     try:
-        import sys
         import time
 
         print("〇調査したいファイルをドラッグ&ドロップしてEnterを押してください。")
