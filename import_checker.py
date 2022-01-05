@@ -36,6 +36,7 @@ def main():
     except FileNotFoundError as NOT_FOUND_ERROR:
         print(f"ModuleNotFoundError: {NOT_FOUND_ERROR} at main")
 
+# importチェック処理
 def check_import(path):
     import_data = []
     from_data = []
@@ -45,7 +46,8 @@ def check_import(path):
 
     replace_line = [linedata.replace(' ', '') for linedata in lines]
     replace_and_strip_line = [replacedata.replace('\n', '') for replacedata in replace_line]
-
+    
+    # import行の抽出
     for pyline in replace_and_strip_line:
         if pyline.startswith("import", 0):
             del_import = pyline.replace('import', '')
@@ -55,6 +57,7 @@ def check_import(path):
             del_from = del_import.replace('import', ' import ')
             from_data.append(del_from)
 
+    # セット→リストにすることで重複要素の削除
     import_data = list(set(import_data))
     from_data = list(set(from_data))
 
