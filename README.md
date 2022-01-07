@@ -5,7 +5,7 @@ Pythonのimportしたライブラリを表示するプログラム
 Pythonファイルを読み込み、importしたライブラリを表示するプログラムです。<br>
 from importにてimportしたライブラリは全文表記したため、通常のimportしたライブラリとは別の欄に出力されます。<br>
 
-出力例↓<br>
+実際に[import_test.py](/import_test.py)のデータを用いて出力した結果が下の画像のようになります。<br>
 ![2022-01-07_21h11_08](https://user-images.githubusercontent.com/77985354/148542576-9db9680e-7015-470c-8409-413148b22533.png)
 
 
